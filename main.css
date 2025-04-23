@@ -1,0 +1,539 @@
+/* 비활성 클래스 */
+.unactive{
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efe5d9;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* fixed 상단 내비게이션 */
+header {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* 햄버거 메뉴와 로고 정렬 */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 220px;
+    height: auto;
+    position: relative;
+    left: 30px;
+}
+
+/* 내비게이션 */
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons span {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* 햄버거 메뉴 */
+.burger-menu {
+    /* cursor: pointer; */
+    z-index: 99999;
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    
+}
+
+.burger-menu span {
+    font-size: 28px;
+    color: black;
+}
+
+.burger-menu {
+    position: fixed;
+    z-index: 99999;
+    left: 30px;
+    top: 10px;
+}
+
+.burger-icon {
+    display: block;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 36px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.burger_inner {
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    background-color: white;
+    left: 0;
+}
+
+.menu-in{
+    align-items: flex-start;
+}
+
+.burger_inner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    /* display: flex; */
+    align-content: space-evenly;
+}
+
+.burger_inner h2 {
+    padding: 10px;
+    background-color: #444;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.burger_inner ul li {
+    display: block;
+    padding: 10px 20px;
+    float: left;
+}
+
+.burger_inner ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.burger_inner ul li a:hover{
+    color: #0056b3;
+}
+
+#menu-toggle:checked + .burger-icon + .burger_inner {
+    display: block;
+}
+
+#menu-toggle:checked + .burger-icon .material-symbols-outlined {
+    content: 'close';
+}
+
+
+/* 상단 배경 */
+.top_bg{
+    position: relative;
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_bg_inner{
+    position: relative;
+    width: 100%;
+    left: center;
+    /* min-width: 940px; */
+    max-width: 1200px;
+    height: 60vh;
+    padding-top: 50px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    background:url(img_main/bg_visual.png) no-repeat center center;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    /* vertical-align: top; */
+}
+
+
+
+/* 본문 콘텐츠 */
+
+main {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 100px 20px 20px 100px;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* 아티클 섹션 */
+article {
+    background-color: white;
+    margin: 0;
+    border-radius: 30px;
+    /* display: inline; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 250px;
+    height: 400px;
+}
+strong{
+    font-size: 45px;
+    width: 33%;
+    height: 20%;
+    position: relative;
+    top: 100px;
+    left: 0%;
+    padding-left: 100px;
+}
+
+article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+article h2 {
+    margin-top: 10px;
+}
+
+article:hover .overlay {
+    opacity: 1;
+}
+
+article a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+div#youtube1, div#youtube2 {
+    position: relative;
+    max-width: 900px;
+    height: 500px;
+    background-color: #000;
+    overflow: hidden;
+    left: calc(50% - 450px);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#youtube1 iframe, div#youtube2 iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 40px;
+}
+
+/* 캐러셀 컨테이너 */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transition 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+}
+
+.carousel-slider article {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 400px;
+    margin: 0 10px;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+}
+
+/* top_arr */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+#scrollToTopBtn img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+}
+
+.show {
+    display: block;
+}
+
+/*footer 스타일 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.in_footer{
+    margin: 45px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .sns a{
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: #5f5f5f;
+    /* position: absolute; */
+
+}
+
+footer .sns a img{
+    width: auto;
+}
+
+.footer_bottom{
+    padding: 58px 0 80px 0;
+    margin: 0 32px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.footer_bottom ul{
+    list-style: none;
+    float: left;
+}
+.footer_bottom ul li{
+    float: left;
+}
+.footer_bottom ul li a{
+    color: #909090;
+}
+.footer_bottom ul.up_arr li a::after{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    margin: 4px 20px 0 7px;
+    background: url(/potpol.html/img_main/ico_arr_upward_16.png) no-repeat;
+}
+
+
+
+
+/* ========================================
+                반응형/
+======================================== */
+
+/* 1500px ~ */
+@media (min-width: 1500px) {
+    .search-container{
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+
+/* 데스크톱 화면 (1200px ~ 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+    nav {
+        /* border: 1px solid pink; */
+        gap: 30px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+    .search-container{
+        display: block;
+    }
+}
+
+/* 태블릿 화면 (950px ~ 1199) */
+@media (min-width: 950px) and (max-width: 1199px) {
+    header nav{
+        width: 100%;
+        position: absolute;
+        left: 73%;
+        /* border: 1px solid blue; */
+        gap: 20px;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .search-container{
+        display: none;
+    }
+}
+
+/* 모바일 화면 (949px 이하) */
+@media (max-width: 949px) {
+    nav {
+        /* border: 1px solid red; */
+        display: none;
+        position: relative;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        z-index: 2;
+    }
+    .logo img{
+        align-items: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    /* 검색 */
+    .search-container {
+        display: none;
+    }
+
+    .top_bg {
+        /* height: 40vh; */
+        padding-top: 20px;
+        padding-bottom: 10px;
+        /* background-size: contain; */
+    }
+
+    /* 백그라운드 */
+    .container {
+        background-size: contain;
+        height: auto;
+    }
+
+    article{
+        width: 100vw;
+    }
+
+    div#youtube1, div#youtube2{
+        width: 100%;
+        left: 0;
+    }
+    .burger_inner{
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger_inner {
+        width: 80vw; /* 화면 크기에 맞게 조정 */
+        max-width: 300px; /* 최대 너비 설정 */
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger_inner a {
+        font-size: 1.2rem;
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+/* ========================================
+                /반응형
+======================================== */
