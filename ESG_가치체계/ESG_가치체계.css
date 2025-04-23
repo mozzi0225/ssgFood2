@@ -1,0 +1,467 @@
+/* 비활성 클래스 */
+.unactive{
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 헤더 */
+header {
+    background-color: white;
+    padding: 20px 0 0 0;
+    color: #fff;
+    text-align: center;
+}
+
+.header-container img {
+    width: 30%;
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+/* ===============nav===============*/
+
+nav ul {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+nav li {
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: black;
+}
+
+nav li:hover {
+    color: #0073e6;
+
+}
+
+nav li.active {
+    color: #0073e6;
+    font-weight: bold;
+}
+
+/* ===============nav의 inner (main)===============*/
+main > div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* margin: 30px auto; */
+    width: 100vw;
+}
+main > div > div{
+    display: none;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    /* z-index: 10; */
+}
+
+main > div > div.active {
+    display: block;
+}
+
+main > div > div ul {
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+main > div > div ul li {
+    padding: 8px 0;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    width: 95vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div > div ul li a{
+    cursor: pointer;
+}
+
+main > div > div ul li:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: #f0f8ff;
+}
+
+/* ===============nav inner의 현재 위치===============*/
+
+main > div > div ul .active{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #0073e6;
+}
+
+main > div > div ul .active:hover{
+    font-weight: bold;
+}
+
+/* ===============상단의 이미지===============*/
+.top_bg {
+    background: url('img_ESG가치체계/bg_svisual4-2.png') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 24px;
+}
+
+.top_bg h2{
+    padding: 3vw;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    line-height: 52px;
+    font-size: 40px;
+    font-weight: normal;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main_txt {
+    text-align: center;
+    margin-top: 118px;
+    margin-bottom: 50px;
+}
+
+.main_txt b{
+    font-size: 33px;
+    line-height: 54px;
+}
+
+.main_txt p{
+    font-size: 15px;
+    line-height: 30px;
+}
+
+/* ===============아티클===============*/
+article {
+    width: calc(100vw-20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 5vw;
+}
+
+/* ===============1.표===============*/
+
+article .circle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+article .circle img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+article .circle p{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center
+}
+
+/* ===============2, 3, 4 텍스트===============*/
+
+article .mind,
+article .way,
+article .ethic {
+    margin-bottom: 30px;
+}
+
+article .mind p,
+article .way p,
+article .ethic p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004B87;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===============경영이념===============*/
+
+article .mind img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 654px;
+    max-height: 89px;
+}
+
+/* ===============텍스트===============*/
+article .txt {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 15% 60px 15%;
+}
+
+article .txt p {
+    margin-bottom: 15px;
+}
+
+.fst {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 14px;
+}
+
+article .txt hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* ===============길===============*/
+article .way{
+    position: relative;
+    width: 95vw;
+    height: 600px;
+    padding: 0;
+    background: url(img_ESG가치체계/bg_csr_value.png) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+article .way p {
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+article .way::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 19, 19, 0.7);
+    z-index: 1;
+}
+
+article .way span {
+    position: relative;
+    z-index: 2; /* 가상 요소 위에 배치 */
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 텍스트를 수직 정렬 */
+    font-size: 16px;
+    line-height: 2.8;
+}
+
+article .way .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+/* ===============윤리강령===============*/
+
+article .ethic_box{
+    margin: auto 20%;
+}
+
+article .ethic_box .fethic{
+    font-size: 15px;
+    color: #444;
+    background-color: #e5e5e5;
+    padding: 18px 0 14px 0;
+    margin: 20px 0 17px 0;
+    text-align: center;
+}
+
+article .ethic_box .fethic b{
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+article .ethic_box .fethic p{
+    font-size: 15px;
+    color: #444;
+    font-weight: small;
+}
+
+
+
+article .ethic_box ol {
+    overflow: hidden;
+    list-style: none;
+}
+
+article .ethic_box li {
+    position: relative;
+    padding: 8px 15px 7px 81px;
+    font-size: 15px;
+    line-height: 30px;
+    background: #f2f2f2;
+    letter-spacing: -.5px
+}
+
+article .ethic_box ol li + li{
+    margin-top: 5px;
+}
+
+article .ethic_box li::before{
+    content: '01';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57px;
+    height: 100%;
+    line-height: 44px;
+    border-right: 5px solid #fff;
+    background: #f2f2f2;
+    text-align: center;
+    vertical-align: top;
+}
+
+article .ethic_box li:nth-child(2)::before{
+    content: '02';
+}
+article .ethic_box li:nth-child(3)::before{
+    content: '03';
+}
+article .ethic_box li:nth-child(4)::before{
+    content: '04';
+}
+article .ethic_box li:nth-child(5)::before{
+    content: '05';
+}
+article .ethic_box li:nth-child(6)::before{
+    content: '06';
+}
+article .ethic_box li:nth-child(7)::before{
+    content: '07';
+}
+article .ethic_box li:nth-child(8)::before{
+    content: '08';
+}
+article .ethic_box li:nth-child(9)::before{
+    content: '09';
+}
+article .ethic_box li:nth-child(10)::before{
+    content: '10';
+}
+article .ethic_box li:nth-child(11)::before{
+    content: '11';
+}
+article .ethic_box li:nth-child(12)::before{
+    content: '12';
+}
+
+
+/* 푸터 */
+footer {
+    width: 100%;
+    text-align: left;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.85rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer_txt {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    word-wrap: break-word;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .main_txt {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_txt {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header{
+        padding-bottom: 0;
+    }
+
+    .top_bg {
+        height: 200px;
+        font-size: 20px;
+    }
+
+    article {
+        padding: 15px;
+    }
+    article .circle p{
+        font-size: 16px;
+    }
+}
